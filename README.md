@@ -72,9 +72,6 @@ The crate returns an error if:
 - \( n \) is not a factor of \( p - 1 \).
 - The primitive root cannot be generated.
 
-## Documentation
-
-The crate is fully documented with examples and usage instructions. You can find the documentation [here](#).
 
 ## License
 

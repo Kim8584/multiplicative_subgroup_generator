@@ -46,16 +46,9 @@ The crate checks if \( p \) is prime and if \( n \) is a factor of \( p - 1 \). 
 
 - The crate cannot create a subgroup for a group whose modulo is not prime.
 - The size of the subgroup must be a factor of \( p - 1 \), otherwise an error is returned.
+# primitive root generation
+Once the inputs are validated, the crate generates a primitive root modulo \( p \). This is done by randomly selecting a value \( x \) such that \( 2 \leq x \leq p - 2 \). The crate then checks if \( x \) is a primitive root by verifying that \( x^{(p-1)/\text{factor}} \neq 1 \mod p \) for all factors of \( p - 1 \). If \( x \) is a primitive root, it is returned as the generator of the subgroup. If not, another candidate is generated.
 
-### Primitive Root Generation
-
-Once the inputs are validated, the crate generates a **primitive root modulo** \( p \). This is done by randomly selecting a value \( x \) such that \( 2 \leq x \leq p - 2 \). The crate then checks if \( x \) is a primitive root by verifying that:
-
-\[
-x^{\frac{p-1}{\text{factor}}} \neq 1 \mod p
-\]
-
-for all factors of \( p - 1 \). If \( x \) is a primitive root, it is returned as the generator of the subgroup. If not, another candidate is generated.
 
 
 ## Generating the Multiplicative Subgroup

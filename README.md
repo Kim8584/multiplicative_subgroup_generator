@@ -78,7 +78,7 @@ The crate is fully documented with examples and usage instructions. You can find
 
 ## License
 
-The crate is licensed under the MIT License. See [LICENSE](#) for details.
+This code is not licensed and was for educational purposes if you want to use it in production you are either very brave or very stupid or a mixture of both
 
 ```
 
